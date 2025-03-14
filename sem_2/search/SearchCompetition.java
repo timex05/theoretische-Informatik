@@ -8,11 +8,11 @@ public class SearchCompetition {
     public static void main(String[] args) {
         IntSearcher linearSearch = new LinearSearch();
         IntSearcher logarithmicSearch = new LogarithmicSearch();
-        HashSearcher hashSearch = new HashSearcher();
+        IntSearcher hashSearch = new HashSearcher();
 
         Random r = new Random();
 
-        final int LIMIT = 4;
+        final int LIMIT = 100000;
         int[] numbersLS = new int[LIMIT];
         int[] numbersLogS = new int[LIMIT];
         int[] numbersHash = new int[LIMIT];
@@ -22,12 +22,13 @@ public class SearchCompetition {
             numbersHash[i] = numbersLS[i];
         }
 
-        hashSearch.fill(numbersHash, 10);
+    
 
-        Arrays.stream(hashSearch.hashStorage).forEach(System.out::println);
+        
 
-        //numbersLS[13] = 234;
-        //numbersLogS[13] = 234;
+        // numbersLS[13] = 234;
+        // numbersLogS[13] = 234;
+        // numbersHash[13] = 234;
 
         Arrays.sort(numbersLogS);
         
@@ -43,22 +44,31 @@ public class SearchCompetition {
         // System.out.println("logarithmic Search");
         // System.out.println("Find Element: 234: " + logarithmicSearch.find(234, numbersLogS));
 
-        // long t1 = System.nanoTime();
+        long t1 = System.nanoTime();
 
-        // System.out.println(linearSearch.find(234, numbersLS));
+        System.out.println(linearSearch.find(234, numbersLS));
 
-        // long t2 = System.nanoTime();
+        long t2 = System.nanoTime();
 
-        // System.out.println("Linear: " + (t2-t1));
+        System.out.println("Linear: " + (t2-t1));
 
 
-        // t1 = System.nanoTime();
+        t1 = System.nanoTime();
 
-        // System.out.println(logarithmicSearch.find(234, numbersLogS));
+        System.out.println(logarithmicSearch.find(234, numbersLogS));
 
-        // t2 = System.nanoTime();
+        t2 = System.nanoTime();
 
-        // System.out.println("Logarithmic: " + (t2-t1));
+        System.out.println("Logarithmic: " + (t2-t1));
+
+
+        t1 = System.nanoTime();
+
+        System.out.println(hashSearch.find(234, numbersLogS));
+
+        t2 = System.nanoTime();
+
+        System.out.println("Hash: " + (t2-t1));
 
 
 

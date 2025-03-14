@@ -7,7 +7,7 @@ public class LogarithmicSearch implements IntSearcher {
         int pivot = left + (right - left)/2;
 
         if(numbers[pivot] == elementToFind) return true;
-        if(left == right) return false;
+        if(left >= right) return false;
 
         
         if(numbers[pivot] > elementToFind) return find(elementToFind, numbers, left, pivot -1);
