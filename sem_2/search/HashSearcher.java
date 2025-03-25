@@ -26,15 +26,15 @@ public class HashSearcher implements IntSearcher {
 
     @Override
     public boolean find(int elementToFind, int[] numbers) {
-        int limit = numbers.length + 1000;
+        final int LIMIT = numbers.length + 1000;
         boolean found = false;
-        fill(numbers, limit);
+        fill(numbers, LIMIT);
 
-        int index = elementToFind % limit;
+        int index = elementToFind % LIMIT;
         while(!found && hashStorage[index] != 0){
             if(elementToFind == hashStorage[index]) found = true;
             index ++;
-            if(index >= limit) index = 0;
+            if(index >= LIMIT) index = 0;
         }
         return found;
 
