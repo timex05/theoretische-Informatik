@@ -21,8 +21,8 @@
       {
         "ID": 1,
         "Name": "q0",
-        "x": 160,
-        "y": 140,
+        "x": 130,
+        "y": 370,
         "Final": false,
         "Radius": 30,
         "Transitions": [
@@ -59,8 +59,8 @@
       {
         "ID": 2,
         "Name": "q1",
-        "x": 370,
-        "y": 240,
+        "x": 340,
+        "y": 230,
         "Final": false,
         "Radius": 30,
         "Transitions": [
@@ -86,7 +86,7 @@
             "Source": 2,
             "Target": 7,
             "x": 0,
-            "y": 0,
+            "y": -20,
             "Labels": [
               "c"
             ]
@@ -97,16 +97,16 @@
       {
         "ID": 3,
         "Name": "q2",
-        "x": 350,
-        "y": 380,
+        "x": 340,
+        "y": 370,
         "Final": false,
         "Radius": 30,
         "Transitions": [
           {
             "Source": 3,
             "Target": 6,
-            "x": 0,
-            "y": 0,
+            "x": 10,
+            "y": 20,
             "Labels": [
               "a"
             ]
@@ -123,8 +123,8 @@
           {
             "Source": 3,
             "Target": 10,
-            "x": 0,
-            "y": 0,
+            "x": -10,
+            "y": -20,
             "Labels": [
               "c"
             ]
@@ -135,16 +135,16 @@
       {
         "ID": 4,
         "Name": "q3",
-        "x": 330,
-        "y": 590,
+        "x": 340,
+        "y": 510,
         "Final": false,
         "Radius": 30,
         "Transitions": [
           {
             "Source": 4,
             "Target": 7,
-            "x": 0,
-            "y": 0,
+            "x": 10,
+            "y": 20,
             "Labels": [
               "a"
             ]
@@ -173,8 +173,8 @@
       {
         "ID": 6,
         "Name": "q5",
-        "x": 680,
-        "y": 210,
+        "x": 630,
+        "y": 230,
         "Final": false,
         "Radius": 30,
         "Transitions": [
@@ -203,8 +203,8 @@
       {
         "ID": 7,
         "Name": "q6",
-        "x": 670,
-        "y": 400,
+        "x": 630,
+        "y": 370,
         "Final": false,
         "Radius": 30,
         "Transitions": [
@@ -233,8 +233,8 @@
       {
         "ID": 10,
         "Name": "q9",
-        "x": 680,
-        "y": 560,
+        "x": 630,
+        "y": 510,
         "Final": false,
         "Radius": 30,
         "Transitions": [
@@ -263,8 +263,8 @@
       {
         "ID": 11,
         "Name": "q10",
-        "x": 1180,
-        "y": 270,
+        "x": 890,
+        "y": 370,
         "Final": true,
         "Radius": 30,
         "Transitions": [
