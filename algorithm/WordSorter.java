@@ -1,4 +1,4 @@
-package sem_3;
+package algorithm;
 
 public class WordSorter {
     

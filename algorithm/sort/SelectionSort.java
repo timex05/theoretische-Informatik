@@ -1,4 +1,4 @@
-package sem_3.sort;
+package algorithm.sort;
 import java.util.Arrays;
 
 public class SelectionSort implements IntSorter {

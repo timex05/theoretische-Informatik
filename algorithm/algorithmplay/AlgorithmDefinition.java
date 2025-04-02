@@ -1,4 +1,4 @@
-package sem_3.algorithmplay;
+package algorithm.algorithmplay;
 
 
 public class AlgorithmDefinition {

@@ -1,4 +1,4 @@
-package sem_3.sort;
+package algorithm.sort;
 
 public interface IntSorter {
     
