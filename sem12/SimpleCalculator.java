@@ -1,6 +1,5 @@
 package sem12;
 
-import java.util.Stack;
 
 public class SimpleCalculator {
     public static void main(String[] args) {
@@ -10,33 +9,37 @@ public class SimpleCalculator {
 
     }
 
-    public int calculate(String expression){
+    public double calculate(String expression){
 
-        Stack<Integer> stack = new Stack<>();
+        MyStack<Double> stack = new MyStack<>();
         for(int i = expression.length() -1; i >= 0; i--){
-            String character = String.valueOf(expression.charAt(i));
+            char character = expression.charAt(i);
 
-
-
-            try {
-                int val = Integer.parseInt(character);
+            if(Character.isDigit(character)){
+                double val = Double.parseDouble(String.valueOf(character));
                 stack.push(val);
-            } catch (Exception e) {
-                if(character.equals("+")){
-                    int value1 = stack.pop();
-                    int value2 = stack.pop();
+            } else {
+                if(character == '+'){
+                    double value1 = stack.pop();
+                    double value2 = stack.pop();
                     stack.push(value1 + value2);
                 }
-                if(character.equals("-")){
-                    int value1 = stack.pop();
-                    int value2 = stack.pop();
+                if(character == ('-')){
+                    double value1 = stack.pop();
+                    double value2 = stack.pop();
                     stack.push(value1 - value2);
                 }
 
-                if(character.equals("*")){
-                    int value1 = stack.pop();
-                    int value2 = stack.pop();
+                if(character == '*'){
+                    double value1 = stack.pop();
+                    double value2 = stack.pop();
                     stack.push(value1 * value2);
+                }
+
+                if(character == '/'){
+                    double value1 = stack.pop();
+                    double value2 = stack.pop();
+                    stack.push(value1 / value2);
                 }
             }
         }
